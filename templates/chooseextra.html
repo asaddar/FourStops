@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>FourStops</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<h1>FourStops</h1>
+
+	<p>Directions going from: {{ firstspot }} to {{ secondspot }}</p>
+
+	{% for x in second_set %}
+	<p>{{ x }}</p>
+	{% endfor %}
+
+	<h3>Select the next stop you'd like to visit</h3>
+
+	<div>
+
+	<form action="/selectfourth" method="POST">
+
+		<select name="location_choices">
+		
+			<option value="{{ firstaddr }}">{{ firstval }}</option>
+			<option value="{{ secondaddr }}">{{ secondval }}</option>
+			<option value="{{ thirdaddr }}">{{ thirdval }}</option>
+			<option value="{{ fourthaddr }}">{{ fourthval }}</option>
+			<option value="{{ fifthaddr }}">{{ fifthval }}</option>
+			<option value="{{ sixthaddr }}">{{ sixthval }}</option>
+			<option value="{{ seventhaddr }}">{{ seventhval }}</option>
+			<option value="{{ eighthaddr }}">{{ eighthval }}</option>
+			<option value="{{ ninthaddr }}">{{ ninthval }}</option>
+			<option value="{{ tenthaddr }}">{{ tenthval }}</option>
+		
+		</select>
+		
+		<button type="submit" id="submit" name="user_submit">Submit</button>
+
+	</form>
+
+	</div>
+
+	<p>Powered by Google Maps and FourSquare</p>
+
+</body>
+
+</html>

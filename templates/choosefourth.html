@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>FourStops</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<h1>FourStops</h1>
+
+	<p>Directions going from: {{ firstspot }} to {{ secondspot }}</p>
+
+	{% for x in third_set %}
+	<p>{{ x }}</p>
+	{% endfor %}
+
+	<div>
+
+	<a href="{{ url_for('fifth') }}">Click here to go to your final destination!</a>
+
+	</div>
+
+	<p>Powered by Google Maps and FourSquare</p>
+
+</body>
+
+</html>

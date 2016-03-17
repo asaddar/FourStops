@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>FourStops</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<h1>FourStops</h1>
+
+	<p>Directions going from: {{ firstspot }} to {{ secondspot }}</p>
+
+	{% for x in last_set %}
+	<p>{{ x }}</p>
+	{% endfor %}
+
+	<h3>You've reached your final destination</h3>
+	
+	<p>Powered by Google Maps and FourSquare</p>
+
+</body>
+
+</html>
