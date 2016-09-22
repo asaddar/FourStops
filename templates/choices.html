@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>FourStops</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<h1>FourStops</h1>
+
+	<p>Directions going from: {{ firstspot }} to {{ secondspot }}</p>
+
+	{% for step in directions %}
+	<p>{{ step }}</p>
+	{% endfor %}
+
+	<h3>Select the next stop you'd like to visit</h3>
+	
+	<div>
+
+		{% for venue in venues %}
+			{% if id != 3 %}
+    			<a href="/directions/{{ venue['address'] }}">
+                	{{ venue['name'] }}
+            	</a><br>
+            {% else %}
+            	<a href="/directions/nearend/{{ venue['address'] }}">
+                	{{ venue['name'] }}
+            	</a><br>
+            {% endif %}
+  		{% endfor %}
+
+	</div>
+
+	<p>Powered by Google Maps and FourSquare</p>
+
+</body>
+
+</html>

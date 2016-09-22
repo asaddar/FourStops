@@ -13,8 +13,8 @@
 
 	<p>Directions going from: {{ firstspot }} to {{ secondspot }}</p>
 
-	{% for x in last_set %}
-	<p>{{ x }}</p>
+	{% for step in directions %}
+	<p>{{ step }}</p>
 	{% endfor %}
 
 	<h3>You've reached your final destination</h3>

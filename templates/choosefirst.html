@@ -15,26 +15,11 @@
 
 	<div>
 
-	<form action="/selectsecond" method="POST">
-
-		<select name="location_choices">
-		
-			<option value="{{ firstaddr }}">{{ firstval }}</option>
-			<option value="{{ secondaddr }}">{{ secondval }}</option>
-			<option value="{{ thirdaddr }}">{{ thirdval }}</option>
-			<option value="{{ fourthaddr }}">{{ fourthval }}</option>
-			<option value="{{ fifthaddr }}">{{ fifthval }}</option>
-			<option value="{{ sixthaddr }}">{{ sixthval }}</option>
-			<option value="{{ seventhaddr }}">{{ seventhval }}</option>
-			<option value="{{ eighthaddr }}">{{ eighthval }}</option>
-			<option value="{{ ninthaddr }}">{{ ninthval }}</option>
-			<option value="{{ tenthaddr }}">{{ tenthval }}</option>
-		
-		</select>
-		
-		<button type="submit" id="submit" name="user_submit">Submit</button>
-
-	</form>
+		{% for venue in venues %}
+			<a href="/directions/{{ venue['address'] }}">
+                {{ venue['name'] }}
+            </a><br>
+		{% endfor %}
 
 	</div>
 
