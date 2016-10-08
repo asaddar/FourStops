@@ -12,7 +12,7 @@ id = 1
 app = Flask(__name__)
 
 def get_directions(origin, destination):
-	directions_payload = {'origin': origin, 'destination': destination, 'key': 'AIzaSyBaJ5oJ6uTTQrLhBf-uVCKSX2RqdMLJPFU'}
+	directions_payload = {'origin': origin, 'destination': destination, 'key': ''}
 	directions_req = requests.get(directions_url, params=directions_payload)
 	directions_json = directions_req.json()
 	directions_list = []
@@ -30,7 +30,7 @@ def get_directions(origin, destination):
 
 
 def get_coordinates(location):
-	geo_payload = {'address': location, 'key': 'AIzaSyBaJ5oJ6uTTQrLhBf-uVCKSX2RqdMLJPFU'}
+	geo_payload = {'address': location, 'key': ''}
 	geo_req = requests.get(geo_url, params=geo_payload)
 	geo_json = geo_req.json()
 
@@ -46,7 +46,7 @@ def get_coordinates(location):
 
 
 def get_venue_info(lat, lng):
-	foursquare_payload = {'oauth_token': 'OYOW4WMMFS5W4NOVMOY2E3AH43BAFEI5JAGAOOBYZ3UBVV5C',
+	foursquare_payload = {'oauth_token': '',
 						'll': lat + ',' + lng,
 						'section': 'sights',
 						'limit': '10',
